@@ -19,7 +19,16 @@ export function NavBar(){
         </ul>
 
       </div>
-      <a className="btn btn-ghost normal-case text-xl">LOGO</a>
+      <a className="btn btn-ghost normal-case text-xl bg-white rounded-lg">
+
+        <Image
+        alt='Logo'
+        src='/logo.png'
+        width={30}
+        height={50}
+        className="rounded-[200px]"
+        />
+      </a>
     </div>
 
     <div className="navbar-center hidden lg:flex">

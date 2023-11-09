@@ -19,4 +19,5 @@
 p{
   @apply px-3;
   @apply py-2;
+  font-size: 20px;
 }
