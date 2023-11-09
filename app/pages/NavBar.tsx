@@ -5,7 +5,7 @@ import Link from "next/link"
 import { randomArray } from "../author/array"
 
 const navbar={main:[{id:Date.now(),title:"Об Авторе",href:"/author"},{id:Date.now(),title:"Главная",href:"/"}],
-dropdown:'Фильмы',dropitems:[{ id:Date.now(),title:'Добавлю Наполеон' ,href:"#"},{id:Date.now(),title:'Аватар' ,href:"/avatar"}]
+dropdown:'Фильмы',dropitems:[{ id:Date.now(),title:'Добавлю Наполеон' ,href:"/napoleon"},{id:Date.now(),title:'Аватар' ,href:"/avatar"}]
 }
 export function NavBar(){
 
@@ -18,6 +18,7 @@ if(index<randomNumber){
 }
 else if(index===randomNumber){
     setIndex(0)
+    alert("Конец, Дальше по второму кругу")
 }
 else{
     alert(`${randomArray[index]} !`)
