@@ -27,7 +27,7 @@ export function Main(){
       <p>Дальше интересно где же синие полосатое семейство будет прятаться? Сьебет в лес и не
         будет отсвечивать? Может у другого подобного же лесного клана?
         Нет,наши герои </p>
-        <div className="p-6 border-[1px] border-white rounded-md">
+        <div className="px-6 border-[1px] border-white rounded-md">
 <Image
 alt='Оматикайя'
 width={500}
@@ -38,7 +38,7 @@ src='/omat.jpg'
 <p>ОМАТИКАЙЯ</p>
 </div>
 <p>решают прятаться у морского племени мектаина.</p>
-<div className="p-6 border-[1px] border-white rounded-md">
+<div className="px-6 border-[1px] border-white rounded-md">
 <Image
 alt='Оматикайя'
 width={500}
