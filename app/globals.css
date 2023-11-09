@@ -16,4 +16,7 @@
   }
 }
 
-
+p{
+  @apply px-3;
+  @apply py-2;
+}

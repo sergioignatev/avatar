@@ -8,7 +8,8 @@ const Footer = () => {
       <p>Сделано Сергеем Игнатьевым - Специально для Татьяны</p>
     </aside> 
     <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-     <p></p>
+     <p>Можете закинуть денег на 9654593551 Alfa</p>
+     <p>Или просто сделать кофе</p>
     </nav>
   </footer>
   )
