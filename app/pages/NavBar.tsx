@@ -44,16 +44,13 @@ let randomNumber=randomArray.length
 
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
-      <li><Link href='/author'>Об Авторе</Link></li>
-       
-        <li><Link href='/'>Главная</Link></li>
+      {navbar.main.map(nav=><li key={nav.id}><Link href={nav.href}>{nav.title}</Link></li>)}
        
         <li tabIndex={0}>
           <details>
-            <summary>ФИЛЬМЫ</summary>
+            <summary>{navbar.dropdown}</summary>
             <ul className="p-2">
-              <li><a>Здесь будет Наполеон</a></li>
-              <li><a>Пока Ничего</a></li>
+            {navbar.dropitems.map(item=><li key={Date.now()}><Link href='#'>{item}</Link></li>)}
             </ul>
           </details>
         </li>
