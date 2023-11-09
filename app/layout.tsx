@@ -15,9 +15,13 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) 
+
+
+{
+  let datatheme="black"
   return (
-    <html lang="en" data-theme="aqua">
+    <html lang="en" data-theme={datatheme}>
 
       <body className={inter.className}>
         <NavBar/>

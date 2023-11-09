@@ -7,7 +7,7 @@ interface Navigation{
     movie:string
 }
 const navbar={main:[{id:Date.now(),title:"Об Авторе",href:"/author"},{id:Date.now(),title:"Главная",href:"/"}],
-dropdown:'Фильмы',dropitems:['Добавлю Наполеон',"Че нить добавлю",'Аватар']
+dropdown:'Фильмы',dropitems:[{ id:Date.now(),title:'Добавлю Наполеон' ,href:"#"},{id:Date.now(),title:'Аватар' ,href:"/avatar"}]
 }
 export function NavBar(){
 
@@ -24,7 +24,7 @@ let randomNumber=randomArray.length
           <li>
             <a>{navbar.dropdown}</a>
             <ul className="p-2">
-              {navbar.dropitems.map(item=><li key={Date.now()}><Link href='#'>{item}</Link></li>)}
+              {navbar.dropitems.map(item=><li key={item.id}><Link href={item.href}>{item.title}</Link></li>)}
             </ul>
           </li>
         </ul>
@@ -50,7 +50,7 @@ let randomNumber=randomArray.length
           <details>
             <summary>{navbar.dropdown}</summary>
             <ul className="p-2">
-            {navbar.dropitems.map(item=><li key={Date.now()}><Link href='#'>{item}</Link></li>)}
+            {navbar.dropitems.map(item=><li key={item.id}><Link href={item.href}>{item.title}</Link></li>)}
             </ul>
           </details>
         </li>
