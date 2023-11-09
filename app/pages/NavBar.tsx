@@ -16,7 +16,10 @@ if(index<randomNumber){
     setIndex(prev=>prev+1)
     alert(`${randomArray[index]} !`)
 }
-else{setIndex(0)
+else if(index===randomNumber){
+    setIndex(0)
+}
+else{
     alert(`${randomArray[index]} !`)
 }
  }
