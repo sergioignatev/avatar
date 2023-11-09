@@ -1,6 +1,8 @@
 import Image from "next/image"
+
 export function Main(){
     return <div className="pt-[50px]">
+        
        <p>Вчера посмотрел наконец Аватар часть 2 про борьбу человек синего с человеком обыкновенным
         .Картинка понравилась, хоть и смотрел на компе, но в сюжете есть несколько 
         косяков, и некоторые моменты можно было бы улучшить,и творчески переосмыслить, особенно с учетом российских 
@@ -27,27 +29,30 @@ export function Main(){
       <p>Дальше интересно где же синие полосатое семейство будет прятаться? Сьебет в лес и не
         будет отсвечивать? Может у другого подобного же лесного клана?
         Нет,наши герои </p>
-        <div className="py-6 sm:border-[1px] rounded-md">
+        <div className="relative group flex items-center justify-center duration-100 ">
 <Image
 alt='Оматикайя'
-width={500}
+width={900}
 height={500}
 src='/omat.jpg'
-
+className="opacity-30 group-hover:opacity-100 group"
 />
-<p>ОМАТИКАЙЯ</p>
+<p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">ОМАТИКАЙЯ</p>
 </div>
-<p>решают прятаться у морского племени мектаина.</p>
-<div className="py-6 sm:border-[1px]  rounded-md">
+
+<p >решают прятаться у морского племени мектаина.</p>
+
+<div className="relative group flex items-center justify-center duration-100 ">
 <Image
-alt='Оматикайя'
-width={500}
+alt='Меткаина'
+width={900}
 height={500}
 src='/metk.jpg'
-
+className="opacity-30 group-hover:opacity-100 group"
 />
-<p>МЕТКАИНА</p>
+<p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">МЕТКАИНА</p>
 </div>
+
 <p>
 Мне кажеться любой разумный человек прежде всего задаст простой вопрос, нахуй они это сделали.
         Для начала Меткаина просто другой сука вид Нави, с дугой анатомией, сильно отличающиеся

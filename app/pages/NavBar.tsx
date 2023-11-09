@@ -1,17 +1,25 @@
 'use client'
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { randomArray } from "../author/array"
-interface Navigation{
-    id:any,
-    movie:string
-}
+
 const navbar={main:[{id:Date.now(),title:"Об Авторе",href:"/author"},{id:Date.now(),title:"Главная",href:"/"}],
 dropdown:'Фильмы',dropitems:[{ id:Date.now(),title:'Добавлю Наполеон' ,href:"#"},{id:Date.now(),title:'Аватар' ,href:"/avatar"}]
 }
 export function NavBar(){
 
-let randomNumber=randomArray.length
+let [randomNumber,setRandomNumber]=useState(randomArray.length)
+let [index,setIndex]=useState(0)
+ function incr(){
+if(index<randomNumber){
+    setIndex(prev=>prev+1)
+    alert(`${randomArray[index]} !`)
+}
+else{setIndex(0)
+    alert(`${randomArray[index]} !`)
+}
+ }
 
     return <div className="navbar bg-base-100">
     <div className="navbar-start">
@@ -56,8 +64,9 @@ let randomNumber=randomArray.length
         </li>
       </ul>
     </div>
-    <div onClick={()=>alert(randomArray[Math.floor(Math.random()*randomNumber)])} className="navbar-end">
-      <a className="btn">Рандомный факт</a>
+   <div onClick={incr} className="navbar-end">
+      <a className="btn">Интересный факт</a>
     </div>
+
   </div>
 }
