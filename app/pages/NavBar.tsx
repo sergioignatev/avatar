@@ -2,6 +2,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { randomArray } from "../author/array"
+interface Navigation{
+    id:any,
+    movie:string
+}
+const navbar={main:[{title:"Об Авторе",href:"/author"},{title:"Главная",href:"/"}],
+dropdown:'Фильмы',dropitems:['Добавлю Наполеон',"Че нить добавлю"]
+}
 export function NavBar(){
 
 let randomNumber=randomArray.length
@@ -14,6 +21,8 @@ let randomNumber=randomArray.length
         </label>
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li><Link href='/author'>Об Авторе</Link></li>
+
+          <li><Link href='/'>Главная</Link></li>
           <li>
             <a>Фильмы</a>
             <ul className="p-2">
@@ -21,7 +30,6 @@ let randomNumber=randomArray.length
               <li><a>Че Нить добавлю</a></li>
             </ul>
           </li>
-          <li><Link href='/'>Главная</Link></li>
         </ul>
 
       </div>
@@ -40,6 +48,9 @@ let randomNumber=randomArray.length
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
       <li><Link href='/author'>Об Авторе</Link></li>
+       
+        <li><Link href='/'>Главная</Link></li>
+       
         <li tabIndex={0}>
           <details>
             <summary>ФИЛЬМЫ</summary>
@@ -49,7 +60,6 @@ let randomNumber=randomArray.length
             </ul>
           </details>
         </li>
-        <li><Link href='/'>Главная</Link></li>
       </ul>
     </div>
     <div onClick={()=>alert(randomArray[Math.floor(Math.random()*randomNumber)])} className="navbar-end">
