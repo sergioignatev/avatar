@@ -14,7 +14,7 @@ src='/images.jpg'
 alt='Avatar'
 width={800}
 height={1000}
-className='rounded-[10px]'
+className='sm:rounded-[10px]'
 />
   <Main/>
  
