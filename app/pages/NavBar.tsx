@@ -1,5 +1,11 @@
+'use client'
 import Image from "next/image"
+import Link from "next/link"
+import { randomArray } from "../author/array"
 export function NavBar(){
+
+let randomNumber=randomArray.length
+
     return <div className="navbar bg-base-100">
     <div className="navbar-start">
       <div className="dropdown">
@@ -7,7 +13,7 @@ export function NavBar(){
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </label>
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a>Об Авторе</a></li>
+          <li><Link href='/author'>Об Авторе</Link></li>
           <li>
             <a>Фильмы</a>
             <ul className="p-2">
@@ -15,11 +21,11 @@ export function NavBar(){
               <li><a>Че Нить добавлю</a></li>
             </ul>
           </li>
-          <li><a>Контакты</a></li>
+          <li><Link href='/'>Главная</Link></li>
         </ul>
 
       </div>
-      <a className="btn btn-ghost normal-case text-xl bg-white rounded-lg">
+      <Link href='/' className="btn btn-ghost normal-case text-xl bg-white rounded-lg">
 
         <Image
         alt='Logo'
@@ -28,12 +34,12 @@ export function NavBar(){
         height={50}
         className="rounded-[200px]"
         />
-      </a>
+      </Link>
     </div>
 
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
-        <li><a>Об Авторе</a></li>
+      <li><Link href='/author'>Об Авторе</Link></li>
         <li tabIndex={0}>
           <details>
             <summary>ФИЛЬМЫ</summary>
@@ -43,11 +49,11 @@ export function NavBar(){
             </ul>
           </details>
         </li>
-        <li><a>Контакты</a></li>
+        <li><Link href='/'>Главная</Link></li>
       </ul>
     </div>
-    <div className="navbar-end">
-      <a className="btn">ЖМИ</a>
+    <div onClick={()=>alert(randomArray[Math.floor(Math.random()*randomNumber)])} className="navbar-end">
+      <a className="btn">Рандомный факт</a>
     </div>
   </div>
 }
