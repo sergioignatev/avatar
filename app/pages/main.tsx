@@ -32,10 +32,10 @@ export function Main(){
         <div className="relative group flex items-center justify-center duration-100 ">
 <Image
 alt='Оматикайя'
-width={900}
+width={1500}
 height={500}
 src='/omat2.jpg'
-className="opacity-30 group-hover:opacity-100 group"
+className="opacity-30 group-hover:opacity-100 group sm:pl-3 lg:pr-[200px]"
 />
 <p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">ОМАТИКАЙЯ</p>
 </div>
@@ -45,10 +45,10 @@ className="opacity-30 group-hover:opacity-100 group"
 <div className="relative group flex items-center justify-center duration-100 ">
 <Image
 alt='Меткаина'
-width={900}
+width={1500}
 height={500}
 src='/metk2.jpg'
-className="opacity-30 group-hover:opacity-100 group"
+className="opacity-30 group-hover:opacity-100 group  sm:pl-3 lg:pr-[200px] "
 />
 <p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">МЕТКАИНА</p>
 </div>
