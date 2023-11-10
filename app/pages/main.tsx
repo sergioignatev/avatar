@@ -34,7 +34,7 @@ export function Main(){
 alt='Оматикайя'
 width={900}
 height={500}
-src='/omat.jpg'
+src='/omat2.jpg'
 className="opacity-30 group-hover:opacity-100 group"
 />
 <p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">ОМАТИКАЙЯ</p>
@@ -47,7 +47,7 @@ className="opacity-30 group-hover:opacity-100 group"
 alt='Меткаина'
 width={900}
 height={500}
-src='/metk.jpg'
+src='/metk2.jpg'
 className="opacity-30 group-hover:opacity-100 group"
 />
 <p className=" group-hover:hidden font-bold absolute sm:text-[100px]  text-[50px] text-white">МЕТКАИНА</p>
