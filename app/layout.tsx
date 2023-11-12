@@ -21,9 +21,10 @@ export default function RootLayout({
 {
   let datatheme="black"
   return (
-    <html lang="en" data-theme={datatheme}>
+    <html lang="en"  data-theme={datatheme}>
 
       <body className={inter.className}>
+        <div id='top'></div>
         <NavBar/>
         <div className="2xl:px-[200px]">{children}</div>
         <Footer/>
